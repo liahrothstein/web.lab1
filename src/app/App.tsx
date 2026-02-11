@@ -1,6 +1,14 @@
-import './App.scss'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import './App.scss';
 
 export function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setTimeout(() => {navigate('/main')}, 5000); // Автомат. редирект через 5 сек.
+  }, []);
 
   return (
     <div className="index">
