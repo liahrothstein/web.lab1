@@ -10,7 +10,7 @@ export function MainPage() {
                 <h1>Главная страница</h1>
                 <nav>
                     <ul>
-                        <li><Link to='/'>Обо мне</Link></li>
+                        <li><Link to='/biography'>Обо мне</Link></li>
                         <li><Link to='/'>Мои хобби</Link></li>
                         <li><Link to='/'>Фотоальбом</Link></li>
                         <li><Link to='/'>Стажировка</Link></li>
