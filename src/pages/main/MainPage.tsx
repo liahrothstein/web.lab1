@@ -5,7 +5,7 @@ import "./MainPage.scss";
 export function MainPage() {
   return (
     <div className="mainPage">
-      <main className="main-page">
+      <main>
         <h1>Главная страница</h1>
         <nav>
           <ul>
@@ -16,7 +16,7 @@ export function MainPage() {
               <Link to="/hobby">Мои хобби</Link>
             </li>
             <li>
-              <Link to="/">Фотоальбом</Link>
+              <Link to="/photos">Фотоальбом</Link>
             </li>
             <li>
               <Link to="/">Стажировка</Link>
