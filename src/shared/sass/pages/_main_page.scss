@@ -1,171 +1,169 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 .mainPage {
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: $bg-gradient; //Градиентный фон
-    background-attachment: fixed;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: $bg-gradient; //Градиентный фон
+  background-attachment: fixed;
 
-    main {
-        max-width: 600px;
-        margin: 20px auto;
-        padding: 40px;
-        background: $white;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  main {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 40px;
+    background: $white;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
-        h1 {
-            font-size: 2.2rem;
-            color: $text-dark;
-            margin-bottom: 30px;
-            position: relative;
+    h1 {
+      font-size: 2.2rem;
+      color: $text-dark;
+      margin-bottom: 30px;
+      position: relative;
 
-            &::after {
-                content: '';
-                position: absolute;
-                bottom: -10px;
-                left: 0;
-                width: 50px;
-                height: 4px;
-                background: $primary-color;
-                border-radius: 2px;
-            }
-        }
-
-        nav {
-            ul {
-                list-style: none;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-
-                li {
-                    a {
-                        display: block;
-                        padding: 15px 20px;
-                        color: $text-dark;
-                        text-decoration: none;
-                        background: #f8f9fa;
-                        border-radius: 10px;
-                        border-left: 0px solid $primary-color;
-                        font-weight: 500;
-                        transition: $transition;
-
-                        &:hover {
-                            background: #f0f4f8;
-                            border-left: 6px solid $primary-color;
-                            padding-left: 25px;
-                            color: $primary-color;
-                            transform: translateY(-2px);
-                        }
-                    }
-                }
-            }
-        }
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 50px;
+        height: 4px;
+        background: $primary-color;
+        border-radius: 2px;
+      }
     }
 
-    .site-map-container {
-        margin-top: 50px;
-        text-align: center;
-        font-family: 'Inter', sans-serif;
-
-        h2 {
-            color: $white; // Если фон родителя темный
-            margin-bottom: 40px;
-            font-weight: 300;
-        }
-    }
-
-    .map-visual {
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
         display: flex;
-        justify-content: center;
-        padding: 20px;
+        flex-direction: column;
+        gap: 12px;
 
-        .map-node {
-            position: relative;
-            padding: 15px 25px;
-            background: $node-bg;
-            border: 2px solid $node-border;
-            border-radius: 12px;
-            display: inline-block;
-            font-weight: bold;
-            color: $text-color;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            z-index: 2;
+        li {
+          a {
+            display: block;
+            padding: 15px 20px;
+            color: $text-dark;
+            text-decoration: none;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 0px solid $primary-color;
+            font-weight: 500;
+            transition: $transition;
 
-            &.root {
-                background: $node-border;
-                color: white;
+            &:hover {
+              background: #f0f4f8;
+              border-left: 6px solid $primary-color;
+              padding-left: 25px;
+              color: $primary-color;
+              transform: translateY(-2px);
             }
+          }
         }
-
-        .map-branches {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            margin-top: 40px; // Расстояние для линий
-            padding-top: 40px;
-
-            // Вертикальная линия от корня вниз
-            &::before {
-                content: '';
-                position: absolute;
-                top: -40px;
-                left: 50%;
-                width: 2px;
-                height: 40px;
-                background: $line-color;
-            }
-
-            // Горизонтальная соединительная линия
-            &::after {
-                content: '';
-                position: absolute;
-                top: 0;
-                left: 11.5%;
-                width: 75.9%;
-                height: 2px;
-                background: $line-color;
-            }
-        }
-
-        .branch {
-            position: relative;
-            padding: 0 15px;
-
-            // Вертикальные линии к каждому узлу
-            &::before {
-                content: '';
-                position: absolute;
-                top: -38px;
-                left: 50%;
-                width: 2px;
-                height: 20px;
-                background: $line-color;
-            }
-
-            .node {
-                padding: 10px 15px;
-                background: white;
-                border: 1px solid $line-color;
-                border-radius: 8px;
-                font-size: 0.9rem;
-                color: $text-color;
-                min-width: 100px;
-                transition: all 0.3s ease;
-                cursor: pointer;
-
-                &:hover {
-                    border-color: $node-border;
-                    transform: translateY(5px);
-                    box-shadow: 0 5px 10px rgba($node-border, 0.2);
-                    color: $node-border;
-                }
-            }
-        }
+      }
     }
+  }
+
+  .site-map-container {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+
+    h2 {
+      color: $white; // Если фон родителя темный
+      margin-bottom: 40px;
+      font-weight: 300;
+    }
+  }
+
+  .map-visual {
+    display: flex;
+    justify-content: center;
+
+    .map-node {
+      position: relative;
+      padding: 15px 25px;
+      background: $node-bg;
+      border: 2px solid $node-border;
+      border-radius: 12px;
+      display: inline-block;
+      font-weight: bold;
+      color: $text-color;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+
+      &.root {
+        background: $node-border;
+        color: white;
+      }
+    }
+
+    .map-branches {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-top: 40px; // Расстояние для линий
+      padding-top: 40px;
+
+      // Вертикальная линия от корня вниз
+      &::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        width: 2px;
+        height: 40px;
+        background: $line-color;
+      }
+
+      // Горизонтальная соединительная линия
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 11.5%;
+        width: 75.9%;
+        height: 2px;
+        background: $line-color;
+      }
+    }
+
+    .branch {
+      position: relative;
+      padding: 0 15px;
+
+      // Вертикальные линии к каждому узлу
+      &::before {
+        content: "";
+        position: absolute;
+        top: -38px;
+        left: 50%;
+        width: 2px;
+        height: 20px;
+        background: $line-color;
+      }
+
+      .node {
+        padding: 10px 15px;
+        background: white;
+        border: 1px solid $line-color;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        color: $text-color;
+        min-width: 100px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+          border-color: $node-border;
+          transform: translateY(5px);
+          box-shadow: 0 5px 10px rgba($node-border, 0.2);
+          color: $node-border;
+        }
+      }
+    }
+  }
 }
