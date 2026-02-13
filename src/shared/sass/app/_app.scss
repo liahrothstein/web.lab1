@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use '../abstracts' as *;
 
 .index {
@@ -47,10 +49,11 @@ main {
                 border-left: 3px solid $primary-color;
                 padding-left: 15px;
                 transition: transform 0.3s ease;
+                cursor: default;
 
                 &:hover {
                     transform: translateX(5px);
-                    color: darken($text-light, 20%);
+                    color: color.adjust($primary-color, $lightness: -20%);
                 }
             }
         }
