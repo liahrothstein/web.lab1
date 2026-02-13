@@ -146,6 +146,16 @@
         background: $line-color;
       }
 
+      &::after {
+        content: "";
+        position: absolute;
+        top: -18px;
+        left: calc(50% - 4px); // Для того чтобы стрелка была ровной
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 10px solid $line-color;
+      }
+
       .node {
         padding: 10px 15px;
         background: white;
