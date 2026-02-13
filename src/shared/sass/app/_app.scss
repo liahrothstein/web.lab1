@@ -1,0 +1,61 @@
+@use "sass:color";
+
+@use '../abstracts' as *;
+
+.index {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-gradient; //Градиентный фон
+    background-attachment: fixed;
+}
+
+main {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 40px;
+    background: $card-bg;
+    border-radius: 15px;
+    box-shadow: $shadow;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    h1 {
+        color: $primary-color;
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            font-weight: bold;
+            color: $text-dark;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            &+p {
+                margin: 5px 0 0 0;
+                color: $text-light;
+                font-size: 1.1rem;
+                line-height: 1.5;
+                border-left: 3px solid $primary-color;
+                padding-left: 15px;
+                transition: transform 0.3s ease;
+                cursor: default;
+
+                &:hover {
+                    transform: translateX(5px);
+                    color: color.adjust($primary-color, $lightness: -20%);
+                }
+            }
+        }
+    }
+}

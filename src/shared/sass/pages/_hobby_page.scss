@@ -1,0 +1,164 @@
+@use "../abstracts" as *;
+
+.hobbyPage {
+  background: $bg-gradient; //Градиентный фон
+  background-attachment: fixed;
+}
+
+main.hobby-page {
+  padding: 60px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .hobbies-container {
+    max-width: 1000px;
+    width: 100%;
+  }
+
+  .hobbies-header {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h1 {
+      font-size: 3rem;
+      color: $text-dark;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: $primary-color;
+      font-size: 1.2rem;
+      font-weight: 300;
+    }
+  }
+
+  .hobby-section {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 120px; // Создаем объем для "2-3 страниц"
+    background: $bg-white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .hobby-content {
+      flex: 1;
+
+      h2 {
+        font-size: 1.8rem;
+        color: $text-dark;
+        margin-bottom: 20px;
+      }
+
+      p {
+        line-height: 1.8;
+        color: $text-light;
+        margin-bottom: 25px;
+      }
+
+      .hobby-list {
+        list-style: none;
+        padding: 0;
+        li {
+          padding-left: 25px;
+          position: relative;
+          margin-bottom: 10px;
+          color: $text-dark;
+          &::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: $primary-color;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .hobby-image {
+      flex: 1;
+      height: 350px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: $transition;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .quote-box {
+    border-left: 4px solid $secondary-color;
+    padding: 10px 20px;
+    background: #fdfbff;
+    font-style: italic;
+    color: $secondary-color;
+  }
+
+  .books-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .book-card {
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      border: 1px solid #eee;
+      font-size: 0.95rem;
+      &:hover {
+        border-color: $primary-color;
+      }
+    }
+  }
+
+  .hobby-gallery {
+    text-align: center;
+    margin-top: 50px;
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+
+      .grid-item {
+        height: 200px;
+        border-radius: 15px;
+        overflow: hidden;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: $transition;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hobby-section,
+  .hobby-section.reverse {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+}

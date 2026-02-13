@@ -1,0 +1,104 @@
+@use '../abstracts' as *;
+
+.biographyPage {
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $bg-gradient; //Градиентный фон
+    background-attachment: fixed;
+
+    .about-container {
+        max-width: 800px;
+        background: $white;
+        border-radius: 20px;
+        padding: 50px;
+        box-shadow: $shadow-soft;
+        border-top: 5px solid $primary-color;
+    }
+
+    .about-header {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 40px;
+
+        .photo-wrapper {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid $accent-bg;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; // Фото не искажается
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: $text-dark;
+            margin: 0;
+        }
+    }
+
+    .biography {
+        margin-bottom: 40px;
+
+        h3 {
+            color: $primary-color;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: $text-light;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+
+            strong {
+                color: $text-dark;
+            }
+        }
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        border-top: 1px solid #eee;
+        padding-top: 30px;
+
+        .info-item {
+            .label {
+                display: block;
+                font-size: 0.8rem;
+                color: $primary-color;
+                font-weight: bold;
+                margin-bottom: 5px;
+                text-transform: uppercase;
+            }
+
+            p {
+                margin: 0;
+                color: $text-dark;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+// Адаптив для мобильных
+@media (max-width: 600px) {
+    .about-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
