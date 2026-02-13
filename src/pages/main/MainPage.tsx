@@ -19,7 +19,7 @@ export function MainPage() {
               <Link to="/photos">Фотоальбом</Link>
             </li>
             <li>
-              <Link to="/">Стажировка</Link>
+              <Link to="/trainee">Стажировка</Link>
             </li>
           </ul>
         </nav>
