@@ -4,7 +4,7 @@ import path from 'path';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/",
+  base: "/web.lab1/",
   plugins: [react()],
   server: {
     host: true,

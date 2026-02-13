@@ -7,7 +7,9 @@ export function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => {navigate('/main')}, 5000); // Автомат. редирект через 5 сек.
+    setTimeout(() => {
+      navigate('/web.lab1/main');
+    }, 5000); // Автомат. редирект через 5 сек.
   }, []);
 
   return (

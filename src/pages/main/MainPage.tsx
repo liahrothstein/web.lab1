@@ -10,16 +10,16 @@ export function MainPage() {
         <nav>
           <ul>
             <li>
-              <Link to="/biography">Обо мне</Link>
+              <Link to="/web.lab1/biography">Обо мне</Link>
             </li>
             <li>
-              <Link to="/hobby">Мои хобби</Link>
+              <Link to="/web.lab1/hobby">Мои хобби</Link>
             </li>
             <li>
-              <Link to="/photos">Фотоальбом</Link>
+              <Link to="/web.lab1/photos">Фотоальбом</Link>
             </li>
             <li>
-              <Link to="/trainee">Стажировка</Link>
+              <Link to="/web.lab1/trainee">Стажировка</Link>
             </li>
           </ul>
         </nav>
