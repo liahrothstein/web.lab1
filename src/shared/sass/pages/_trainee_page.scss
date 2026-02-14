@@ -28,7 +28,10 @@
       font-weight: 900;
       letter-spacing: 2px;
       color: #000;
-      span { color: $modsen-blue; }
+
+      span {
+        color: $modsen-blue;
+      }
     }
 
     .status-badge {
@@ -77,8 +80,15 @@
         border-radius: 8px;
         border-left: 4px solid $modsen-blue;
 
-        h4 { margin: 0 0 10px; color: $dark-slate; }
-        p { font-size: 0.9rem; margin: 0; }
+        h4 {
+          margin: 0 0 10px;
+          color: $dark-slate;
+        }
+
+        p {
+          font-size: 0.9rem;
+          margin: 0;
+        }
       }
     }
 
@@ -96,7 +106,7 @@
         font-family: 'Courier New', Courier, monospace; // "Кодерский" шрифт
         color: $modsen-blue;
         font-weight: bold;
-        
+
         &:hover {
           background: $modsen-blue;
           color: #fff;
@@ -120,9 +130,14 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      
-      &:hover .icon { transform: translateX(-5px); }
-      .icon { transition: transform 0.3s; }
+
+      &:hover .icon {
+        transform: translateX(-5px);
+      }
+
+      .icon {
+        transition: transform 0.3s;
+      }
     }
 
     .internship-period {

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import { photos } from "@constants/photos";
 
@@ -22,7 +23,7 @@ export function PhotosPage() {
         <div className="slide">
           <div className="image-wrapper">
             <img
-              src={photos[currentIndex].url}
+              src={photos[currentIndex].image}
               alt={photos[currentIndex].caption}
             />
           </div>
@@ -33,6 +34,11 @@ export function PhotosPage() {
             </span>
           </div>
         </div>
+        <footer className="photos-footer">
+          <Link to="/web.lab1/main" className="btn-back">
+            <span className="icon">←</span> На главную
+          </Link>
+        </footer>
       </div>
     </div>
   );
