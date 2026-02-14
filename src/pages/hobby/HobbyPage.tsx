@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
+
+import { hobbies } from '@constants/hobbies';
+
 import coding from "../../shared/assets/images/coding-hobby.jpg";
 import reading from "../../shared/assets/images/reading.webp";
 import tennis from "../../shared/assets/images/table-tennis.jpeg";
-import photo1 from "../../shared/assets/images/photo1.webp";
-import photo2 from "../../shared/assets/images/photo2.webp";
-import photo3 from "../../shared/assets/images/photo3.webp";
-import photo4 from "../../shared/assets/images/photo4.webp";
 
 import "./HobbyPage.scss";
 
@@ -87,20 +87,18 @@ export function HobbyPage() {
               запечатлеть эстетику ГГУ или тишину парка.
             </p>
             <div className="image-grid">
-              <div className="grid-item">
-                <img src={photo1} alt="Landscape" />
-              </div>
-              <div className="grid-item">
-                <img src={photo2} alt="Architecture" />
-              </div>
-              <div className="grid-item">
-                <img src={photo3} alt="Nature" />
-              </div>
-              <div className="grid-item">
-                <img src={photo4} alt="University" />
-              </div>
+              {hobbies.map((photo) => (
+                <div className="grid-item" key={photo.caption}>
+                  <img src={photo.image} alt={photo.caption} />
+                </div>
+              ))}
             </div>
           </section>
+          <footer className="hobbies-footer">
+            <Link to="/web.lab1/main" className="btn-back">
+              <span className="icon">←</span> На главную
+            </Link>
+          </footer>
         </div>
       </main>
     </div>
