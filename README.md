@@ -38,7 +38,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone [https://github.com/liahrothstein/web.lab1.git](https://github.com/liahrothstein/web.lab1.git)
+   git clone https://github.com/liahrothstein/web.lab1.git
 2. Перейдите в папку проекта:
    ```bash
    cd web.lab1
