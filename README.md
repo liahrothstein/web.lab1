@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+# Лабораторная работа №1: Структура HTML-документа
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Современная реализация многостраничного веб-сайта, выполненная в рамках учебного курса. Проект демонстрирует навыки работы с компонентами, сложной разметкой, анимациями и модульной системой стилей SCSS.
 
-Currently, two official plugins are available:
+[![Tech Stack](https://img.shields.io/badge/Stack-React%20%7C%20TS%20%7C%20SCSS-blue)](https://github.com/liahrothstein/web.lab1)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 О проекте
 
-## React Compiler
+Цель работы — изучение структуры HTML-документов и реализация семантической разметки. В отличие от классических статических страниц, данный проект построен как **SPA (Single Page Application)** на React, что соответствует современным стандартам IT-индустрии и требованиям стажировки в **Modsen**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Основные разделы:
+* **Стартовая страница:** Техническая информация о работе (название, цель, ФИО автора).
+* **Главная:** Центральный узел навигации по разделам сайта.
+* **Обо мне:** Биография студента факультета физики и ИТ ГГУ им. Ф. Скорины.
+* **Мои хобби:** Подробное описание увлечений с использованием списков и медиа-контента.
+* **Фотоальбом:** Интерактивное слайд-шоу с автоматическим переключением изображений (интервал 3 сек) и подписями.
+* **Стажировка:** Описание текущего опыта JS-разработки в компании Modsen.
+* **Карта сайта:** Визуальная интерактивная схема архитектуры проекта, реализованная на SCSS.
 
-## Expanding the ESLint configuration
+## 🛠 Технологический стек
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **React 18** — компонентный подход и управление состоянием.
+* **TypeScript** — строгая типизация для повышения надежности.
+* **SCSS (Sass)** — модульные стили, переменные и современные функции (Dart Sass).
+* **React Router** — клиентская навигация без перезагрузки страниц.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📋 Особенности реализации
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+1.  **Слайд-шоу:** Использование хуков `useState` и `useEffect` для управления циклом смены фотографий.
+2.  **Архитектура стилей:**
+    * Применение `sass:color` и функции `color.adjust` для динамического изменения оттенков.
+    * Полная адаптивность под мобильные устройства.
+3.  **Графическая навигация:** Реализация структуры переходов в виде схемы с использованием CSS-псевдоэлементов `::before` и `::after`.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Запуск проекта
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Для локального запуска выполните следующие команды:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Клонируйте репозиторий:
+   ```bash
+   git clone [https://github.com/liahrothstein/web.lab1.git](https://github.com/liahrothstein/web.lab1.git)
+2. Перейдите в папку проекта:
+   ```bash
+   cd web.lab1
+3. Установите зависимости:
+   ```bash
+   npm install
+4. Запустите сервер для разработки:
+   ```bash
+   npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 👨‍🎓 Автор
+
+**Новиков Д. А.**
+
+* Студент ГГУ им. Ф. Скорины.
+* Факультет физики и ИТ, кафедра теоретической физики.
+* Группа: КФ-17.
+* Trainee JS Developer @ Modsen.

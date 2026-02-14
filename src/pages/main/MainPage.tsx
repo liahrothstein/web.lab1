@@ -31,16 +31,16 @@ export function MainPage() {
             <span>Главная страница</span>
             <div className="map-branches">
               <div className="branch">
-                <div className="node">Обо мне</div>
+                <Link className="node" to="/web.lab1/biography">Обо мне</Link>
               </div>
               <div className="branch">
-                <div className="node">Мои хобби</div>
+                <Link className="node" to="/web.lab1/hobby">Мои хобби</Link>
               </div>
               <div className="branch">
-                <div className="node">Фотоальбом</div>
+                <Link className="node" to="/web.lab1/photos">Фотоальбом</Link>
               </div>
               <div className="branch">
-                <div className="node">Стажировка</div>
+                <Link className="node" to="/web.lab1/trainee">Стажировка</Link>
               </div>
             </div>
           </div>
