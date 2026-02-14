@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { skills } from "@constants/skills";
 
 import "./TraineePage.scss";
@@ -48,9 +50,9 @@ export function TraineePage() {
           <div className="tech-stack">
             <h3>Технологический стек</h3>
             <div className="tags-container">
-              {skills.map((skill, i, arr) => (
+              {skills.map((skill) => (
                 <span key={skill} className="tech-tag">
-                  {`${skill}${i !== arr.length - 1 ? ", " : ""}`}
+                  {skill}
                 </span>
               ))}
             </div>
@@ -58,6 +60,9 @@ export function TraineePage() {
         </section>
 
         <footer className="trainee-footer">
+          <Link to="/web.lab1/main" className="btn-back">
+            <span className="icon">←</span> На главную
+          </Link>
           <div className="internship-period">
             Период: Февраль 2026 — Настоящее время
           </div>
