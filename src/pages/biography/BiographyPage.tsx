@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import photo from '../../shared/assets/images/photo.jpg'
 
 import './BiographyPage.scss';
@@ -42,6 +44,11 @@ export function BiographyPage() {
                         <p>Квантовая механика, веб-технологии, тяжелая атлетика</p>
                     </div>
                 </section>
+                <footer className="about-footer">
+                    <Link to="/web.lab1/main" className="btn-back">
+                        <span className="icon">←</span> На главную
+                    </Link>
+                </footer>
             </div>
         </div>
     )
