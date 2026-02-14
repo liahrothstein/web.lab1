@@ -15,6 +15,28 @@
         padding: 50px;
         box-shadow: $shadow-soft;
         border-top: 5px solid $primary-color;
+
+        .about-footer {
+            margin-top: 10px;
+            font-size: 0.9rem;
+
+            .btn-back {
+                text-decoration: none;
+                color: $modsen-blue;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+
+                &:hover .icon {
+                    transform: translateX(-5px);
+                }
+
+                .icon {
+                    transition: transform 0.3s;
+                }
+            }
+        }
     }
 
     .about-header {
